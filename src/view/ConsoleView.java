@@ -23,3 +23,20 @@ public int tampilkanMenu() {
 
     return Integer.parseInt(sc.nextLine());
 }
+public String[] inputFormPutusan() {
+    String[] data = new String[12];
+
+    System.out.print("Nomor Perkara: ");
+    data[0] = sc.nextLine();
+
+    System.out.print("Pengadilan: ");
+    data[1] = sc.nextLine();
+
+    System.out.print("Tanggal Putusan: ");
+    data[2] = sc.nextLine();
+
+    System.out.print("Nama Terdakwa: ");
+    data[3] = sc.nextLine();
+
+    return data;
+}
