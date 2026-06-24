@@ -1,4 +1,5 @@
 package model;
 
-public class Laporan {
+public interface Laporan {
+    void tampilkan();
 }
