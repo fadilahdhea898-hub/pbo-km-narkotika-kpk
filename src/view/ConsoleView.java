@@ -81,3 +81,7 @@ public String[] inputFormPutusan() {
 
     return data;
 }
+public String inputKeyword(String pesan) {
+    System.out.print(pesan);
+    return sc.nextLine();
+}
