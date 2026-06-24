@@ -68,6 +68,43 @@ public class Putusan extends DokumenHukum implements Laporan {
 
     @Override
     public void tampilkan() {
+        System.out.println(nomorPerkara + " | " + namaTerdakwa + " | " + jenisNarkotika + " | " + vonisHukuman + " bulan");
+    }
+
+    public void tampilkan(boolean detail) {
+        if (detail) {
+            System.out.println(this);
+        } else {
+            tampilkan();
+        }
+    }
+
+    @Override
+    public String getKategoriHukuman() {
+        if (vonisHukuman <= 12) {
+            return "Ringan";
+        } else if (vonisHukuman <= 60) {
+            return "Sedang";
+        } else {
+            return "Berat";
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Nomor Perkara: " + nomorPerkara +
+                "\nPengadilan: " + pengadilan +
+                "\nTanggal Putusan: " + tanggalPutusan +
+                "\nNama Terdakwa: " + namaTerdakwa +
+                "\nUmur: " + umurTerdakwa +
+                "\nJenis Narkotika: " + jenisNarkotika +
+                "\nBerat Barang Bukti: " + beratBarangBukti + " gram" +
+                "\nPasal: " + pasalDilanggar +
+                "\nPeran: " + peranTerdakwa +
+                "\nVonis: " + vonisHukuman + " bulan" +
+                "\nDenda: Rp" + vonisDenda +
+                "\nHakim: " + namaHakim +
+                "\nKategori Hukuman: " + getKategoriHukuman();
     }
 
     @Override
