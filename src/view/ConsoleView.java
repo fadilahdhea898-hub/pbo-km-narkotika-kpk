@@ -3,6 +3,7 @@ package view;
 import model.Putusan;
 import java.util.ArrayList;
 import java.util.Scanner;
+import model.StatistikPutusan;
 
 public class ConsoleView {
     private Scanner sc = new Scanner(System.in);
@@ -89,5 +90,11 @@ public class ConsoleView {
 
     public void tampilkanPesan(String pesan) {
         System.out.println(pesan);
+    }
+    public void tampilkanStatistik(StatistikPutusan stat) {
+        System.out.println("\n===== STATISTIK PUTUSAN =====");
+        System.out.println("Total Putusan: " + stat.getTotalPutusan());
+        System.out.println("Rata-rata Vonis: " + stat.getRataRataVonis() + " bulan");
+        System.out.println("Rata-rata Denda: Rp" + stat.getRataRataDenda());
     }
 }
